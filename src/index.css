@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Global Variables */
+:root {
+  --primary-color: #1b4332;
+  --secondary-color: #57cc99;
+  --tertiary-color: #80ed99;
+  --accent-color: #8892b0;
+  --secondary-accent: #6fffe9;
+  --tertiary-accent: #ccd6f6;
+  --background-color: #00171f;
+  --primary-font: "Roboto Condensed", serif;
+  --secondary-font: "Space Mono", serif;
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  overflow: hidden; /* Prevent scrolling */
+}
+
+h1 {
+  color: var(--secondary-accent);
+}
+
+h2,
+li {
+  color: var(--tertiary-accent);
+}
+
+h3,
+h4 {
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+}
+
+p {
+  color: var(--accent-color);
+  font-family: var(--secondary-font);
+}
+
+/* Button styles */
+button {
+  border: 2px solid var(--secondary-accent);
+  background-color: transparent;
+  /* color: transparent; */
+  color: var(--secondary-accent);
+  font-family: var(--primary-font);
+  font-size: var(--fz-sm);
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px var(--secondary-accent);
+}
+
+/* Links */
+a {
+  color: var(--secondary-accent);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Animation for fading down the navbar */
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for fading in from the left */
+@keyframes fadeInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,37 @@
+COLOR PALETTE
+--primary-color: #003459; 
+  --secondary-color: #007ea7; 
+  --tertiary-color: #00a8e8;
+  --accent-color: #ffffff;
+  --background-color: #00171f;
+  --secondary-accent: #6fffe9; 
+
+FONT PAIRING
+~ Primary: Open Sans
+~ Secondary: Montserrat
+
+VIBE
+~ Minimalistic
+~ Elegant
+
+LAYOUT
+~ Home
+~ Projects
+~ About
+~ Contact
+~ Resume
+
+TECH STACK
+~ React
+~ Tailwind CSS( for easy styling )
+~ Framer Motion ( Add smooth animations )
+~ React Router
+
+FILE STRUCTURE
+src  
+├── components/         # Reusable components (Navbar, Footer, etc.)  
+├── pages/              # Home, Projects, About, Contact  
+├── assets/             # Images, fonts, icons  
+├── context/            # ThemeContext or other global state  
+├── styles/             # Tailwind base styles or global CSS  
+└── App.jsx             # Main app file  
