@@ -2,6 +2,7 @@
   height: 100vh;
   padding: 0 150px;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: center;
 }
@@ -24,6 +25,10 @@
 .description {
   font-size: 1.5rem;
   max-width: 780px;
+}
+
+.project-btn {
+  margin-top: 45px;
 }
 
 .home-container .div-container {

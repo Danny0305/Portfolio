@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../components/Button";
 import "../styles/Home.css";
 
 function Home() {
@@ -23,7 +24,7 @@ function Home() {
         </div>
         <div className="div-container">
           <Link to="/projects">
-            <button>Check Out My Work</button>
+            <Button className="project-btn">Check Out My Work</Button>
           </Link>
         </div>
       </div>

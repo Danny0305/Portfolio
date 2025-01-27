@@ -35,7 +35,6 @@ body {
   font-family: var(--primary-font);
   background-color: var(--background-color);
   color: var(--accent-color);
-  overflow: hidden; /* Prevent scrolling */
 }
 
 h1 {
@@ -56,25 +55,6 @@ h4 {
 p {
   color: var(--accent-color);
   font-family: var(--secondary-font);
-}
-
-/* Button styles */
-button {
-  border: 2px solid var(--secondary-accent);
-  background-color: transparent;
-  /* color: transparent; */
-  color: var(--secondary-accent);
-  font-family: var(--primary-font);
-  font-size: var(--fz-sm);
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 3px 3px var(--secondary-accent);
 }
 
 /* Links */

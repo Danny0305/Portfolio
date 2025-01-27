@@ -1,0 +1,38 @@
+.resume {
+  padding: 30px;
+  text-align: center;
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr; /* Two columns */
+  gap: 20px; /* Space between the columns */
+  align-items: center; /* Vertically center content */
+  justify-items: center; /* Horizontally center content */
+  margin-top: 20px;
+}
+
+.resume-image img {
+  max-width: 100%; /* Responsive width */
+  height: 800px;
+}
+
+.download-link a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.download-link a:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .resume-container {
+    grid-template-columns: 1fr; /* Stack items vertically on small screens */
+  }
+
+  .resume-image,
+  .download-link {
+    text-align: center;
+  }
+}
