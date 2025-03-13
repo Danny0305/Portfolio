@@ -1,66 +1,28 @@
+import { Provider } from "./components/ui/provider";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import Resume from "./pages/Resume";
 import PageNotFound from "./pages/PageNotFound";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* For every route except PageNotFound, include NavBar */}
-        <Route
-          path="/"
-          element={
-            <>
-              <NavBar />
-              <Home />
-            </>
-          }
-        />
-        <Route
-          path="/about"
-          element={
-            <>
-              <NavBar />
-              <About />
-            </>
-          }
-        />
-        <Route
-          path="/projects"
-          element={
-            <>
-              <NavBar />
-              <Projects />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <NavBar />
-              <Contact />
-            </>
-          }
-        />
-        <Route
-          path="/resume"
-          element={
-            <>
-              <NavBar />
-              <Resume />
-            </>
-          }
-        />
-        {/* PageNotFound without NavBar */}
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </Router>
+    <Provider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </Provider>
   );
 }
 

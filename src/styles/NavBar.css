@@ -1,57 +1,76 @@
-/* NavBar Container */
+/* General navbar styling */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: #00171f;
-  position: sticky;
+  width: 100%;
   top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom: 1px solid var(--Muted-Green);
+  padding: 15px 0;
   z-index: 1000;
 }
 
-.navbar:hover {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Logo Section */
-.navbar-logo .logo-link {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: var(--accent-color);
-  font-family: var(--primary-font);
-  transition: color 0.3s ease;
-}
-
-.navbar-logo .logo-link:hover {
-  color: var(--secondary-accent);
-}
-
-/* NavBar Links */
-.navbar-links {
+/* Flexbox for centering */
+.nav-container {
   display: flex;
-  gap: 20px;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 3rem; /* Spacing between links */
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
-.navbar-links li {
-  font-family: var(--primary-font);
-  padding-top: 10px;
+.nav-links li {
+  display: inline;
 }
 
-.navbar-links .nav-link {
+.nav-links a {
   text-decoration: none;
-  color: var(--accent-color);
-  font-size: var(--fz-md);
-  padding: 5px 10px;
-  border-radius: 4px;
-  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
+  color: #283618; /* Your theme color */
+  transition: color 0.3s ease-in-out;
 }
 
-.navbar-links .nav-link:hover {
-  color: var(--secondary-accent);
-  background-color: rgba(255, 255, 255, 0.1);
+.nav-links a:hover {
+  color: #bc6c25; /* Accent color */
+}
+
+/* Mobile Navigation */
+.menu-toggle {
+  display: none; /* Hide by default on larger screens */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    width: 90%;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
 }

@@ -1,91 +1,55 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* Global Variables */
+/*CSS Variables for Colors */
 :root {
-  --primary-color: #1b4332;
-  --secondary-color: #57cc99;
-  --tertiary-color: #80ed99;
-  --accent-color: #8892b0;
-  --secondary-accent: #6fffe9;
-  --tertiary-accent: #ccd6f6;
-  --background-color: #00171f;
-  --primary-font: "Roboto Condensed", serif;
-  --secondary-font: "Space Mono", serif;
-  --fz-xxs: 12px;
-  --fz-xs: 13px;
-  --fz-sm: 14px;
-  --fz-md: 16px;
-  --fz-lg: 18px;
-  --fz-xl: 20px;
-  --fz-xxl: 22px;
+  --Dark-Olive: #283618; /*Navbar, footer, text accents (for contrast)*/
+  --Muted-Green: #606c38; /*Section dividers, subtle highlights*/
+  --Pure-White: #ffffff; /*Main background (keeps it clean and modern)*/
+  --Warm-Orange: #dda15e; /*Buttons, hover effects, call-to-action elements*/
+  --Rich-Brown: #bc6c25; /*Headings, key highlights, or interactive elements*/
 }
 
-/* Global Styles */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+section {
+  padding: 100px 0;
+  /* Add some padding for each section to make it look good */
+}
+
 body {
-  font-family: var(--primary-font);
-  background-color: var(--background-color);
-  color: var(--accent-color);
+  font-family: "Inter", sans-serif;
+  background-color: var(--Pure-White);
+  color: var(--Dark-Olive);
+  line-height: 1.6;
 }
 
-h1 {
-  color: var(--secondary-accent);
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.03); /* Very subtle gray noise */
+  opacity: 0.2;
+  pointer-events: none; /* So it doesn’t block interactions */
 }
 
+h1,
 h2,
-li {
-  color: var(--tertiary-accent);
-}
-
 h3,
-h4 {
-  color: var(--secondary-color);
-  font-family: var(--secondary-font);
-}
-
-p {
-  color: var(--accent-color);
-  font-family: var(--secondary-font);
-}
-
-/* Links */
-a {
-  color: var(--secondary-accent);
-}
-
-a:hover {
-  color: var(--secondary-color);
-}
-
-/* Animation for fading down the navbar */
-@keyframes fadeDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Animation for fading in from the left */
-@keyframes fadeInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
 }

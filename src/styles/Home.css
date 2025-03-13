@@ -1,57 +1,83 @@
+/* General Layout */
 .home-container {
-  height: 100vh;
-  padding: 0 150px;
+  height: 90vh;
   display: flex;
-  position: relative;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.div-container {
-  margin: 0 0 5px 0;
+.home-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #283618; /* Dark Olive Green */
+  margin-bottom: 10px;
 }
 
-.heading {
-  font-size: 1.2rem;
-  font-weight: 300;
-}
-
-.about {
-  font-size: 4rem; /* Adjust the font size */
-  font-weight: bold;
-  font-family: var(--primary-font);
-}
-
-.description {
+.home-content p {
   font-size: 1.5rem;
-  max-width: 780px;
+  color: #606c38; /* Olive Green */
+  margin-bottom: 20px;
 }
 
-.project-btn {
-  margin-top: 45px;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #bc6c25; /* Warm Orange */
+  background-color: transparent;
+  border: 2px solid #bc6c25;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.home-container .div-container {
-  opacity: 0;
-  animation: fadeInFromLeft 1.5s forwards;
+.btn:hover {
+  background-color: rgba(188, 108, 37, 0.03); /* Light orange on hover */
+  transform: scale(1.03); /* Slight zoom effect */
 }
 
-.home-container .div-container:nth-child(1) {
-  animation-delay: 0.3s;
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content p {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
 
-.home-container .div-container:nth-child(2) {
-  animation-delay: 0.5s;
+@media (max-width: 768px) {
+  .home-content h1 {
+    font-size: 2rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
 
-.home-container .div-container:nth-child(3) {
-  animation-delay: 0.7s;
-}
+@media (max-width: 480px) {
+  .home-content h1 {
+    font-size: 1.5rem;
+  }
 
-.home-container .div-container:nth-child(4) {
-  animation-delay: 0.9s;
-}
+  .home-content p {
+    font-size: 0.875rem;
+  }
 
-.home-container .div-container:nth-child(5) {
-  animation-delay: 1.1s;
+  .btn {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
 }
