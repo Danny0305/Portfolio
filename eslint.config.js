@@ -22,4 +22,7 @@ export default {
   rules: {
     // Add any custom rules you may need here
   },
+  server: {
+    historyApiFallback: true,
+  },
 };
