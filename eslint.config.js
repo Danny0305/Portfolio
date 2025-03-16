@@ -25,4 +25,7 @@ export default {
   server: {
     historyApiFallback: true,
   },
+  build: {
+    outDir: "dist", // Ensure correct build directory
+  },
 };
